@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>So Difficult</title>
+</head>
+<body>
+  <h1 id="name">{{name}}</h1>
+</body>
+<script src="observerDemo.js"></script>
+<script src="observer.js"></script>
+<script src="watcher.js"></script>
+<script src="index.js"></script>
+<script>
+  var element = document.querySelector('#name')
+  var Lumi = new Lumi({
+    name: 'Learning js is too difficult'
+  }, element, 'name')
+  var timer = setTimeout(() => {
+    console.log('name has changed')
+    Lumi.data.name = 'So stupid of myselef'
+  }, 2000)
+</script>
+</html>
